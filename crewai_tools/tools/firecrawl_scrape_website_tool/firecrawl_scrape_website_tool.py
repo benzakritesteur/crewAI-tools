@@ -55,16 +55,16 @@ class FirecrawlScrapeWebsiteTool(BaseTool):
         url: str,
         timeout: Optional[int] = 30000,
     ):
-        options = {
-            "formats": ["markdown"],
-            "onlyMainContent": True,
-            "includeTags": [],
-            "excludeTags": [],
-            "headers": {},
-            "waitFor": 0,
-            "timeout": timeout,
-        }
-        return self._firecrawl.scrape_url(url, options)
+        return self._firecrawl.scrape_url(
+            url,
+            formats= ["markdown"],
+            onlyManContent= True,
+            inclueTags= [],
+            excldeTags= [],
+            heaers= {},
+            watFor= 0,
+            tmeout= timeout,
+        )
 
 
 try:
